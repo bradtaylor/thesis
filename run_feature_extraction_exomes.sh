@@ -1,0 +1,65 @@
+#!/bin/bash
+use GridEngine8-Seq_Dev
+
+/seq/tng/bradt/tools/qsub_standard.sh \
+-m 16000 -n bradt_test_10_libraries -o /seq/tng/bradt/test_exome_libraries.txt \
+java -jar -Xmx16g picard-private.jar FindReadGroupDistributions \
+TMP_DIR=/broad/hptmp/bradt \
+O=/seq/tng/bradt/test_exome_libraries \
+I=/seq/picard/B09N0ABXX/C1-160_2011-05-20_2012-06-15/8/Pond-63707/B09N0ABXX.8.aligned.duplicates_marked.bam \
+I=/seq/picard/B00REACXX/C1-160_2011-06-10_2011-06-18/2/Pond-63707/B00REACXX.2.aligned.duplicates_marked.bam \
+I=/seq/picard/B00REACXX/C1-160_2011-06-10_2011-06-18/3/Pond-63707/B00REACXX.3.aligned.duplicates_marked.bam \
+I=/seq/picard/B00REACXX/C1-160_2011-06-10_2011-06-18/4/Pond-63707/B00REACXX.4.aligned.duplicates_marked.bam \
+I=/seq/picard/B00REACXX/C1-160_2011-06-10_2011-06-18/1/Solexa-65318/B00REACXX.1.aligned.duplicates_marked.bam \
+I=/seq/picard/B09N0ABXX/C1-160_2011-05-20_2012-06-15/7/Pond-63707/B09N0ABXX.7.aligned.duplicates_marked.bam \
+I=/seq/picard/H7J2YADXX/C1-168_2014-04-16_2014-04-24/2/Pond-335195/H7J2YADXX.2.aligned.duplicates_marked.bam \
+I=/seq/picard/H7J2YADXX/C1-168_2014-04-16_2014-04-24/2/Pond-335201/H7J2YADXX.2.aligned.duplicates_marked.bam \
+I=/seq/picard/C3AL5ACXX/C1-168_2014-05-07_2014-05-11/2/Pond-338848/C3AL5ACXX.2.aligned.duplicates_marked.bam \
+I=/seq/picard/C3AL5ACXX/C1-168_2014-05-07_2014-05-11/4/Pond-338849/C3AL5ACXX.4.aligned.duplicates_marked.bam \
+I=/seq/picard/C3AL5ACXX/C1-168_2014-05-07_2014-05-11/4/Pond-338850/C3AL5ACXX.4.aligned.duplicates_marked.bam \
+I=/seq/picard/C3AL5ACXX/C1-168_2014-05-07_2014-05-11/4/Pond-338848/C3AL5ACXX.4.aligned.duplicates_marked.bam \
+I=/seq/picard/C3AL5ACXX/C1-168_2014-05-07_2014-05-11/3/Pond-338850/C3AL5ACXX.3.aligned.duplicates_marked.bam \
+I=/seq/picard/C3AL5ACXX/C1-168_2014-05-07_2014-05-11/1/Pond-338848/C3AL5ACXX.1.aligned.duplicates_marked.bam \
+I=/seq/picard/C3AL5ACXX/C1-168_2014-05-07_2014-05-11/3/Pond-338849/C3AL5ACXX.3.aligned.duplicates_marked.bam \
+I=/seq/picard/C3AL5ACXX/C1-168_2014-05-07_2014-05-11/2/Pond-338849/C3AL5ACXX.2.aligned.duplicates_marked.bam \
+I=/seq/picard/C3AL5ACXX/C1-168_2014-05-07_2014-05-11/2/Pond-338850/C3AL5ACXX.2.aligned.duplicates_marked.bam \
+I=/seq/picard/C3AL5ACXX/C1-168_2014-05-07_2014-05-11/3/Pond-338848/C3AL5ACXX.3.aligned.duplicates_marked.bam \
+I=/seq/picard/C3AL5ACXX/C1-168_2014-05-07_2014-05-11/1/Pond-338850/C3AL5ACXX.1.aligned.duplicates_marked.bam \
+I=/seq/picard/C3AL5ACXX/C1-168_2014-05-07_2014-05-11/1/Pond-338849/C3AL5ACXX.1.aligned.duplicates_marked.bam \
+I=/seq/picard/C3AL5ACXX/C1-168_2014-05-07_2014-05-11/7/Pond-341351/C3AL5ACXX.7.aligned.duplicates_marked.bam \
+I=/seq/picard/C3AL5ACXX/C1-168_2014-05-07_2014-05-11/6/Pond-341351/C3AL5ACXX.6.aligned.duplicates_marked.bam \
+I=/seq/picard/C3AL5ACXX/C1-168_2014-05-07_2014-05-11/6/Pond-341347/C3AL5ACXX.6.aligned.duplicates_marked.bam \
+I=/seq/picard/C3AL5ACXX/C1-168_2014-05-07_2014-05-11/6/Pond-341349/C3AL5ACXX.6.aligned.duplicates_marked.bam \
+I=/seq/picard/C3AL5ACXX/C1-168_2014-05-07_2014-05-11/5/Pond-341351/C3AL5ACXX.5.aligned.duplicates_marked.bam \
+I=/seq/picard/C3AL5ACXX/C1-168_2014-05-07_2014-05-11/5/Pond-341349/C3AL5ACXX.5.aligned.duplicates_marked.bam \
+I=/seq/picard/C3AL5ACXX/C1-168_2014-05-07_2014-05-11/5/Pond-341347/C3AL5ACXX.5.aligned.duplicates_marked.bam \
+I=/seq/picard/C3AL5ACXX/C1-168_2014-05-07_2014-05-11/7/Pond-341349/C3AL5ACXX.7.aligned.duplicates_marked.bam \
+I=/seq/picard/C3AL5ACXX/C1-168_2014-05-07_2014-05-11/7/Pond-341347/C3AL5ACXX.7.aligned.duplicates_marked.bam \
+I=/seq/picard/H8VKAADXX/C1-168_2014-05-04_2014-05-06/2/Pond-342616/H8VKAADXX.2.aligned.duplicates_marked.bam \
+I=/seq/picard/H8VKAADXX/C1-168_2014-05-04_2014-05-06/2/Pond-342628/H8VKAADXX.2.aligned.duplicates_marked.bam \
+I=/seq/picard/H8VKAADXX/C1-168_2014-05-04_2014-05-06/1/Pond-342628/H8VKAADXX.1.aligned.duplicates_marked.bam \
+I=/seq/picard/H8VKAADXX/C1-168_2014-05-04_2014-05-06/1/Pond-342616/H8VKAADXX.1.aligned.duplicates_marked.bam \
+I=/seq/picard/H8VJNADXX/C1-168_2014-05-04_2014-05-06/2/Pond-342616/H8VJNADXX.2.aligned.duplicates_marked.bam \
+I=/seq/picard/H8VJNADXX/C1-168_2014-05-04_2014-05-06/2/Pond-342628/H8VJNADXX.2.aligned.duplicates_marked.bam \
+I=/seq/picard/H8VJNADXX/C1-168_2014-05-04_2014-05-06/1/Pond-342616/H8VJNADXX.1.aligned.duplicates_marked.bam \
+I=/seq/picard/H8VK1ADXX/C1-168_2014-05-04_2014-05-06/2/Pond-342616/H8VK1ADXX.2.aligned.duplicates_marked.bam \
+I=/seq/picard/H8VK1ADXX/C1-168_2014-05-04_2014-05-06/2/Pond-342628/H8VK1ADXX.2.aligned.duplicates_marked.bam \
+I=/seq/picard/H8VJNADXX/C1-168_2014-05-04_2014-05-06/1/Pond-342628/H8VJNADXX.1.aligned.duplicates_marked.bam \
+I=/seq/picard/H8VK1ADXX/C1-168_2014-05-04_2014-05-06/1/Pond-342628/H8VK1ADXX.1.aligned.duplicates_marked.bam \
+I=/seq/picard/H8VK1ADXX/C1-168_2014-05-04_2014-05-06/1/Pond-342616/H8VK1ADXX.1.aligned.duplicates_marked.bam \
+I=/seq/picard/H8VFVADXX/C1-168_2014-05-04_2014-05-15/2/Pond-342628/H8VFVADXX.2.aligned.duplicates_marked.bam \
+I=/seq/picard/H8VFVADXX/C1-168_2014-05-04_2014-05-15/2/Pond-342616/H8VFVADXX.2.aligned.duplicates_marked.bam \
+I=/seq/picard/H8VJDADXX/C1-168_2014-05-08_2014-06-03/1/Pond-342616/H8VJDADXX.1.aligned.duplicates_marked.bam \
+I=/seq/picard/H8VJDADXX/C1-168_2014-05-08_2014-06-03/1/Pond-342628/H8VJDADXX.1.aligned.duplicates_marked.bam \
+I=/seq/picard/H8VJCADXX/C1-168_2014-05-08_2014-05-15/2/Pond-342628/H8VJCADXX.2.aligned.duplicates_marked.bam \
+I=/seq/picard/H8VJCADXX/C1-168_2014-05-08_2014-05-15/2/Pond-342616/H8VJCADXX.2.aligned.duplicates_marked.bam \
+I=/seq/picard/H8VJCADXX/C1-168_2014-05-08_2014-05-15/1/Pond-342628/H8VJCADXX.1.aligned.duplicates_marked.bam \
+I=/seq/picard/H8VJCADXX/C1-168_2014-05-08_2014-05-15/1/Pond-342616/H8VJCADXX.1.aligned.duplicates_marked.bam \
+I=/seq/picard/B014VACXX/C1-160_2011-06-24_2015-01-15/6/Catch-72268/B014VACXX.6.aligned.duplicates_marked.bam \
+I=/seq/picard/B014VACXX/C1-160_2011-06-24_2015-01-15/7/Catch-72268/B014VACXX.7.aligned.duplicates_marked.bam \
+I=/seq/picard/B01TNACXX/C1-210_2011-08-06_2011-08-18/7/Solexa-66382/B01TNACXX.7.aligned.duplicates_marked.bam \
+I=/seq/picard/B01TNACXX/C1-210_2011-08-06_2011-08-18/4/Solexa-66382/B01TNACXX.4.aligned.duplicates_marked.bam \
+I=/seq/picard/D0DD8ABXX/C1-210_2011-07-21_2011-07-30/7/Catch-72268/D0DD8ABXX.7.aligned.duplicates_marked.bam \
+I=/seq/picard/D0DD8ABXX/C1-210_2011-07-21_2011-07-30/4/Catch-72268/D0DD8ABXX.4.aligned.duplicates_marked.bam \
+I=/seq/picard/D041HACXX/C1-210_2011-06-25_2011-07-08/8/Catch-72268/D041HACXX.8.aligned.duplicates_marked.bam \
+I=/seq/picard/D041HACXX/C1-210_2011-06-25_2011-07-08/4/Catch-72268/D041HACXX.4.aligned.duplicates_marked.bam
