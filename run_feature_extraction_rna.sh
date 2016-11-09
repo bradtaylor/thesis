@@ -1,12 +1,12 @@
 #!/bin/bash
 use GridEngine8-Seq_Dev
 
-/seq/tng/bradt/tools/qsub_standard.sh \
+/seq/tng/bradt/tools/qsub_standard.sh -m 16000m \
 -m 16000 -n bradt_test_rna_libraries -o /seq/tng/bradt/test_rna_libraries.txt \
 java -jar -Xmx16g picard-private.jar FindReadGroupDistributions \
 TMP_DIR=/broad/hptmp/bradt \
 O=/seq/tng/bradt/test_rna_libraries \
-/seq/picard/H7MC2ADXY/C1-160_2016-08-02_2016-08-03/1/Solexa-377359/H7MC2ADXY.1.aligned.duplicates_marked.bam \
+I=/seq/picard/H7MC2ADXY/C1-160_2016-08-02_2016-08-03/1/Solexa-377359/H7MC2ADXY.1.aligned.duplicates_marked.bam \
 I=/seq/picard/H7MC2ADXY/C1-160_2016-08-02_2016-08-03/2/Solexa-377359/H7MC2ADXY.2.aligned.duplicates_marked.bam \
 I=/seq/picard/C90KFANXX/C1-160_2016-07-27_2016-07-31/7/Solexa-377359/C90KFANXX.7.aligned.duplicates_marked.bam \
 I=/seq/picard/C90KFANXX/C1-160_2016-07-27_2016-07-31/6/Solexa-377359/C90KFANXX.6.aligned.duplicates_marked.bam \

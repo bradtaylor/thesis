@@ -1,7 +1,7 @@
 #!/bin/bash
 use GridEngine8-Seq_Dev
 
-/seq/tng/bradt/tools/qsub_standard.sh \
+/seq/tng/bradt/tools/qsub_standard.sh -m 16000m \
 -m 16000 -n bradt_test_genomes_new_libraries -o /seq/tng/bradt/test_genomes_new_libraries.txt \
 java -jar -Xmx16g picard-private.jar FindReadGroupDistributions \
 TMP_DIR=/broad/hptmp/bradt \

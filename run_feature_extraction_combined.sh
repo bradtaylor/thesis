@@ -1,11 +1,11 @@
 #!/bin/bash
 use GridEngine8-Seq_Dev
 
-/seq/tng/bradt/tools/qsub_standard.sh \
--m 16000 -n bradt_test_10_libraries -o /seq/tng/bradt/test_agilent_ice_libraries.txt \
+/seq/tng/bradt/tools/qsub_standard.sh -m 16000m \
+-m 16000 -n bradt_test_combined_libraries -o /seq/tng/bradt/test_combined_libraries.txt \
 java -jar -Xmx16g picard-private.jar FindReadGroupDistributions \
 TMP_DIR=/broad/hptmp/bradt \
-O=/seq/tng/bradt/test_agilent_ice_libraries \
+O=/seq/tng/bradt/test_combined_libraries \
 I=/seq/picard/C7G4VANXX/C1-168_2015-08-29_2016-06-20/6/Pond-428365/C7G4VANXX.6.aligned.duplicates_marked.bam \
 I=/seq/picard/C6PMAANXX/C1-168_2015-07-30_2015-08-04/8/Pond-428365/C6PMAANXX.8.aligned.duplicates_marked.bam \
 I=/seq/picard/C6PMAANXX/C1-168_2015-07-30_2015-08-04/7/Pond-428365/C6PMAANXX.7.aligned.duplicates_marked.bam \
@@ -48,14 +48,14 @@ I=/seq/picard/HJJWCADXX/C1-168_2015-05-12_2015-05-13/1/Pond-403934/HJJWCADXX.1.a
 I=/seq/picard/HJJWCADXX/C1-168_2015-05-12_2015-05-13/2/Pond-403934/HJJWCADXX.2.aligned.duplicates_marked.bam \
 I=/seq/picard/C4100ANXX/C1-168_2015-04-15_2015-12-03/2/Pond-396241/C4100ANXX.2.aligned.duplicates_marked.bam \
 I=/seq/picard/C4100ANXX/C1-168_2015-04-15_2015-12-03/1/Pond-396241/C4100ANXX.1.aligned.duplicates_marked.bam \
-I=/seq/picard/HVHWTCCXX/C1-318_2016-07-01_2016-07-04/8/NexPond-546619/HVHWTCCXX.8.aligned.duplicates_marked.bam \
-I=/seq/picard/HVHWTCCXX/C1-318_2016-07-01_2016-07-04/7/NexPond-546619/HVHWTCCXX.7.aligned.duplicates_marked.bam \
-I=/seq/picard/HVGWNCCXX/C1-318_2016-07-01_2016-07-04/6/NexPond-546619/HVGWNCCXX.6.aligned.duplicates_marked.bam \
-I=/seq/picard/HVGWNCCXX/C1-318_2016-07-01_2016-07-04/4/NexPond-546619/HVGWNCCXX.4.aligned.duplicates_marked.bam \
-I=/seq/picard/HVGWNCCXX/C1-318_2016-07-01_2016-07-04/2/NexPond-546619/HVGWNCCXX.2.aligned.duplicates_marked.bam \
-I=/seq/picard/HVGWNCCXX/C1-318_2016-07-01_2016-07-04/5/NexPond-546619/HVGWNCCXX.5.aligned.duplicates_marked.bam \
-I=/seq/picard/HVGWNCCXX/C1-318_2016-07-01_2016-07-04/1/NexPond-546619/HVGWNCCXX.1.aligned.duplicates_marked.bam \
-I=/seq/picard/HVGWNCCXX/C1-318_2016-07-01_2016-07-04/3/NexPond-546619/HVGWNCCXX.3.aligned.duplicates_marked.bam \
+I=/seq/picard/HVHWTCCXX/C1-318_2016-07-01_2016-10-31/8/NexPond-546619/HVHWTCCXX.8.aligned.duplicates_marked.bam \
+I=/seq/picard/HVHWTCCXX/C1-318_2016-07-01_2016-10-31/7/NexPond-546619/HVHWTCCXX.7.aligned.duplicates_marked.bam \
+I=/seq/picard/HVGWNCCXX/C1-318_2016-07-01_2016-10-31/6/NexPond-546619/HVGWNCCXX.6.aligned.duplicates_marked.bam \
+I=/seq/picard/HVGWNCCXX/C1-318_2016-07-01_2016-10-31/4/NexPond-546619/HVGWNCCXX.4.aligned.duplicates_marked.bam \
+I=/seq/picard/HVGWNCCXX/C1-318_2016-07-01_2016-10-31/2/NexPond-546619/HVGWNCCXX.2.aligned.duplicates_marked.bam \
+I=/seq/picard/HVGWNCCXX/C1-318_2016-07-01_2016-10-31/5/NexPond-546619/HVGWNCCXX.5.aligned.duplicates_marked.bam \
+I=/seq/picard/HVGWNCCXX/C1-318_2016-07-01_2016-10-31/1/NexPond-546619/HVGWNCCXX.1.aligned.duplicates_marked.bam \
+I=/seq/picard/HVGWNCCXX/C1-318_2016-07-01_2016-10-31/3/NexPond-546619/HVGWNCCXX.3.aligned.duplicates_marked.bam \
 I=/seq/picard/HVH22CCXX/C1-318_2016-06-27_2016-06-30/1/NexPond-544501/HVH22CCXX.1.aligned.duplicates_marked.bam \
 I=/seq/picard/HMHVHCCXX/C1-318_2016-06-24_2016-06-27/2/NexPond-544501/HMHVHCCXX.2.aligned.duplicates_marked.bam \
 I=/seq/picard/HMHVHCCXX/C1-318_2016-06-24_2016-06-27/7/NexPond-544501/HMHVHCCXX.7.aligned.duplicates_marked.bam \
