@@ -1,0 +1,31 @@
+(a(2x_1 + x_2 + 3)/(x_2 + 1))^2 + (a(2x_3 + x_2 + 3)/(x_2 + 1))^2 + a(a(2x_1 + x_2 + 3)/(x_2+1))(a(2x_3 + x_2 + 3)/(x_2+1)) = 1
+
+
+ln(d * x^(2a) * (xyz)^(b) * y^(2c) - l(x^2 + xyz + y^2 - 1))
+
+
+
+ln(x^2 + xyz + y^2 - 1
+
+
+(n!/(a!b!c!)) * x^(2a) * (xyz)^(b) * y^(2c) - k * (x^2 + xyz + y^2 - 1)
+(n!/(a!b!c!)) * y^(2a) * (xyz)^(b) * x^(2c) - k * (x^2 + xyz + y^2 - 1)
+(n!/(a!b!c!)) * y^(2a) * (xyz)^(b) * z^(2c) - k * (y^2 + xyz + z^2 - 1)
+(n!/(a!b!c!)) * k^(2a) * (kyz)^(b) * y^(2c) - x * (k^2 + kyz + y^2 - 1)
+
+
+gradient of ln((n!/(a!b!c!)) * x^(2a) * (xyz)^(b) * y^(2c)) - k * (x^2 + 2xyz + y^2 - 1)
+
+http://www.wolframalpha.com/input/?i=((2+a+%2B+b+-+k+x+(2+x+%2B+y+z))%2Fx,+(b+%2B+2+c+-+k+y+(2+y+%2B+x+z))%2Fy,+-k+x+y+%2B+b%2Fz)&lk=1&rawformassumption=%22ClashPrefs%22+-%3E+%7B%22Math%22%7D
+
+x = p
+y = q
+z = epsilon
+a = observed count [0,0] (where 0 means first read group of pair)
+b  = 2 * symmetrized observed count [0,1] (where 1 means second read group of pair, same as 2*obs[1,0] due to symmetrization)
+c = observed count [1,1]
+
+so to normilize either of the symmetrized obs[0,1] == obs[1,0], it would be:
+epsilon = b / 2(sqrt(a) sqrt(c)) == obs[0,1] / (sqrt(a) sqrt(c))
+
+...which is just what I've been doing before, and which comes out > 1.
