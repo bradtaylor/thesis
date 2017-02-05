@@ -29,3 +29,19 @@ so to normilize either of the symmetrized obs[0,1] == obs[1,0], it would be:
 epsilon = b / 2(sqrt(a) sqrt(c)) == obs[0,1] / (sqrt(a) sqrt(c))
 
 ...which is just what I've been doing before, and which comes out > 1.
+
+
+Gradient of the lagrange of the ln(likelihood function):
+NOTE- We are maximizing the log of the original function f(x)! We DON'T need to take the log of the linear constraint. PHEW!!!!
+https://www.wolframalpha.com/input/?i=gradient+of+ln((n!%2F(a!b!c!))+*+x%5E(2a)+*+(2xyz)%5E(b)+*+y%5E(2c))+-+k+*+(x%5E2+%2B+2xyz+%2B+y%5E2+-+1)
+
+Solving this system (inc for z):
+http://www.wolframalpha.com/input/?i=((2+a+%2B+b+-2+k+x+(x+%2B+y+z))%2Fx,+(b+%2B+2+(c+-+k+y+(y+%2B+x+z)))%2Fy,+((b%2Fz)+-+2+k+x+y+)
+
+
+THIS IS SOME FLAILING AROUND THAT IS NOT ACTUALLY RELEVANT:
+https://www.wolframalpha.com/input/?i=gradient+of+((n!%2F(a!b!c!))+*+x%5E(2a)+*+(2xyz)%5E(b)+*+y%5E(2c))+-+k+*+(x%5E2+%2B+2xyz+%2B+y%5E2+-+1)
+gradient of ((n!/(a!b!c!)) * x^(2a) * (2xyz)^(b) * y^(2c)) - k * (x^2 + 2xyz + y^2 - 1)
+(n! (2 a+b)x^(2a)y^(2c)((xyz)^b)(2^b) - 2 k x a! b! c! (x + yz)) / (x a! b! c!)
+(n! (b+2c)x^(2a)y^(2c)((xyz)^b)(2^b) - 2 k y a! b! c! (xz + y)) / (y a! b! c!)
+( ( (2^b) b n! x^(2a) y^(2c) (xyz)^b )  / (z a! b! c!) ) - 2 k x y
